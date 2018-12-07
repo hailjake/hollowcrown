@@ -1,0 +1,21 @@
+<div class="live-wrapper">
+
+  <div class="content-wrapper">
+    <!--Twitch Live Feeds-->
+    <div class="live-now-wrapper">
+        <div id="twitch-embed-jake" [className]="isJakeVisible && !isJamesVisible ? 'singleStream' : ''"></div>
+        <div id="twitch-embed-james" [className]="isJamesVisible && !isJakeVisible ? 'singleStream' : ''"></div>
+    </div>
+
+    <div class="chat-wrapper">
+        <iframe frameborder="0"
+                scrolling="no"
+                id="chat_embed"
+                src="https://www.twitch.tv/embed/ghostinthishell/chat"
+               >
+        </iframe>
+        <button class="chat-toggle">Switch Chat</button>
+    </div>
+  </div>
+
+</div>

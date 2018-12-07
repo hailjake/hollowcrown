@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial');
+
+.home-wrapper {
+  position: relative;
+  display: block;
+  background: url('../../assets/hollow-crown-background.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+
+  h2 {
+    color: whitesmoke;
+    text-align: center;
+    letter-spacing: 5px;
+  }
+
+  .content-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: auto;
+
+    .header {
+      width: 100%;
+      height: 100vh;
+      background: url('../../assets/Hollow-Crown-2018.jpg');
+      background-size: cover;
+      background-position: top;
+      position: relative;
+      box-sizing: border-box;
+      
+      @media screen and (max-width: 1850px) {
+        height: 700px;
+      }
+      @media screen and (max-width: 1010px) {
+        height: 500px;
+      }
+      @media screen and (max-width: 760px) {
+        height: 300px;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        z-index: 0;
+        background: url('../../assets/Hollow-Crown-2018.jpg');
+        background-size: cover;
+        opacity: .9;
+        mix-blend-mode: hard-light;
+        animation: animate 1s linear infinite;
+
+        @media screen and (max-width: 1850px) {
+          height: 700px;
+        }
+        @media screen and (max-width: 1010px) {
+          height: 500px;
+        }
+        @media screen and (max-width: 760px) {
+          height: 300px;
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: url('../../assets/static-bg.gif');
+        background-size: cover;
+        opacity: .3;
+        @media screen and (max-width: 1850px) {
+          height: 700px;
+        }
+        @media screen and (max-width: 1010px) {
+          height: 500px;
+        }
+        @media screen and (max-width: 760px) {
+          height: 300px;
+        }
+      }
+
+      @keyframes animate {
+        0% {
+          background-position: 0 0;
+          filter: hue-rotate(0deg);
+        }
+
+        10% {
+          background-position: 5px 0;
+        }
+
+        20% {
+          background-position: -5px 0;
+        }
+
+        30% {
+          background-position: 5px 0;
+        }
+
+        40% {
+          background-position: -25px 0;
+        }
+
+        50% {
+          background-position: 5px 0;
+        }
+
+        60% {
+          background-position: -25px 0;
+        }
+
+        70% {
+          background-position: 0 -20px;
+        }
+
+        80% {
+          background-position: -25px 0;
+        }
+
+        81% {
+          background-position: 0 0;
+        }
+
+        100% {
+          background-position: 0 0;
+          filter: hue-rotate(360deg);
+        }
+      }
+
+      .info {
+        padding: 10px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.25);
+        position: absolute;
+        bottom: 0;
+        box-sizing: border-box;
+
+        h1 {
+          font-family: 'Questrial', sans-serif;
+          font-size: 34px;
+          color: white;
+          font-weight: 100;
+          margin: 0;
+          display: inline-block;
+          text-align: left;
+        }
+
+        i {
+          color: white;
+          font-size: 28px;
+          display: inline-block;
+          float: right;
+          margin-right: 15px;
+        }
+
+      }
+    }
+
+    .spotify {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      opacity: .7;
+      z-index: 10;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+
+    .band-detail {
+      padding: 25px;
+      color: whitesmoke;
+      text-align: center;
+      font-size: 21px;
+      background-color: rgba(0, 0, 0, 0.3);
+      i {
+        color: white;
+        font-size: 28px;
+        margin-right: 15px;
+      }
+    }
+
+    .members-wrapper {
+      width: 100%;
+      background: transparent;
+      overflow: auto;
+      padding: 25px 0;
+
+      .member {
+        box-sizing: border-box;
+        height: 300px;
+        width: 25%;
+        float: left;
+        text-align: center;
+        color: white;
+
+        @media screen and (max-width: 1024px) {
+          width: 50%;
+        }
+
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
+
+        .member-image {
+          width: 150px;
+          height: 150px;
+          border-radius: 100%;
+          background-size: cover;
+          background-position: top;
+          margin: 10px auto;
+        }
+
+        a {
+          color: white;
+          margin-right: 10px;
+          font-size: 20px;
+
+          &:hover {
+            color: #666;
+          }
+        }
+      }
+    }
+
+
+    .live-now-wrapper {
+
+      #twitch-embed-jake,
+      #twitch-embed-james {
+        display: inline-block;
+        float: left;
+        width: 50%;
+      }
+
+      .singleStream {
+        width: 100% !important;
+      }
+    }
+
+  }
+
+}

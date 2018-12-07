@@ -1,0 +1,52 @@
+
+<mat-toolbar class="navbar">
+    <div class="menu-section">
+        <button mat-icon-button (click)="menuToggle=!menuToggle">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+    </div>
+    <div class="hollow-crown-logo"></div>
+    <div class="social-links">
+        <i class="fab fa-spotify"></i>
+        <i class="fab fa-itunes"></i>
+        <i class="fab fa-bandcamp"></i>
+    </div>
+</mat-toolbar>
+<div class="nav-button-wrapper" [ngClass]="menuToggle ? 'toggle-menu' : ''">
+    <div class="hollow-crown-logo"></div>
+    <a mat-button routerLink="home" routerLinkActive="active" (click)="menuToggle=!menuToggle">
+        Home
+    </a>
+    <a mat-button routerLink="live" routerLinkActive="active" (click)="menuToggle=!menuToggle">
+        Live
+    </a>
+    <a mat-button routerLink="chat" routerLinkActive="active" (click)="menuToggle=!menuToggle">
+        Chat
+    </a>
+     <h3>Socials</h3>
+    <a mat-button routerLink=".">
+        Youtube
+    </a>
+    <a mat-button routerLink=".">
+        Facebook
+    </a>
+    <a mat-button routerLink=".">
+        Twitter
+    </a>
+    <a mat-button routerLink=".">
+        Instagram
+    </a>
+    <h3>Music</h3>
+    <a mat-button routerLink=".">
+        Spotify
+    </a>
+    <a mat-button routerLink=".">
+        Itunes
+    </a>
+    <a mat-button routerLink=".">
+        Bandcamp
+    </a>
+</div>
+<div class="nav-backdrop" (click)="menuToggle=!menuToggle" [ngClass]="menuToggle ? 'toggle-bg' : ''"></div>

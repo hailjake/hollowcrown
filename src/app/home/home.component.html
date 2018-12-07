@@ -1,0 +1,47 @@
+<div class="home-wrapper">
+  <div class="content-wrapper">
+    <!--Main Header-->
+    <div class="header">
+      <!--Spotify Iframe Hollow Crown X Pentagrvm-->
+      <iframe src="https://open.spotify.com/embed/track/45gzp3VFbv3vKcNXDiDpLZ" width="300" height="80" frameborder="0"
+        allowtransparency="true" allow="encrypted-media" class="spotify"></iframe>
+    </div>
+    <!--Youtube Iframe Hollow Crown: Backhanded Compliments-->
+    <iframe width="100%" height="500" src="https://www.youtube.com/embed/H4Xe3x-w3DU?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+    <!--Members-->
+    <div class="members-wrapper">
+      <h2>HOLLOW CULT</h2>
+      <div class="member" *ngFor="let member of members">
+        <div class="member-image" [style.backgroundImage]="'url('+ member.image +')'"></div>
+        <p>{{member.role}}: {{member.name}}</p>
+        <a href="" *ngIf="member.instagram.length > 0">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" *ngIf="member.twitter.length > 0">
+          <i class="fab fa-twitter-square"></i>
+        </a>
+      </div>
+    </div>
+    <!--Band Detail-->
+    <div class="band-detail">
+      <p>
+        Hollow Crown is comprised of members from Carnifex, Her Demise My Rise and So This Is Suffering. Fresh off
+        their debut album Bitter Not Broken, Hollow Crown is traveling a different path than those aforementioned
+        bands, while still maintaining a heavy in-your-face style of music.
+      </p>
+      <i class="fab fa-facebook" ></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-twitter-square"></i>
+    </div>
+    <!--Twitch Live Feeds-->
+    <div class="live-now-wrapper">
+      <h2>LIVE FEEDS</h2>
+      <div id="twitch-embed-jake" [className]="isJakeVisible && !isJamesVisible ? 'singleStream' : ''"></div>
+      <div id="twitch-embed-james" [className]="isJamesVisible && !isJakeVisible ? 'singleStream' : ''"></div>
+    </div>
+    <!--  <a class="twitter-timeline" href="https://twitter.com/HollowCrownBand?ref_src=twsrc%5Etfw"></a>
+    <iframe src="https://discordapp.com/widget?id=509442841802571777&theme=dark" width="100%" height="100%"
+      allowtransparency="true" frameborder="0"></iframe>-->
+  </div>
+</div>

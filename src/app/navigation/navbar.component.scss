@@ -1,0 +1,106 @@
+
+.navbar {
+    font-family: 'Kosugi', sans-serif !important;
+    position: fixed;
+    z-index: 1;
+    background-color: transparent;
+    .menu-section {
+      align-self: center;
+      button {
+            padding: 5px 11px 0px 5px;
+            text-align: left;
+        i {
+            position: relative;
+            top: -6px;
+            font-size: 40px;
+            color: white;
+        
+        }
+
+      }
+    }
+    .hollow-crown-logo {
+        background: url(../../assets/hollow-crown-logo.png);
+        background-size: contain;
+        width: 147px;
+        height: 47px;
+        background-repeat: no-repeat;
+        position: relative; 
+        float:left;           
+    }
+    .social-links {
+         position: absolute;
+         right: 20px;
+         top:0;
+         background-color: rgba(0,0,0, .5);
+         padding: 10px 10px 5px 20px;
+         i {
+             color: whitesmoke;
+             font-size: 22px;
+             padding-right: 10px;
+         }
+    }
+  }
+.nav-button-wrapper {
+    position: fixed;
+    width: 350px;
+    height: 100vh;
+    background: rgba(39, 39, 39, .9);
+    left: -360px;
+    transition: all .5s ease-in-out;
+    -webkit-box-shadow: 4px 0px 5px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 0px 5px -3px rgba(0,0,0,0.75);
+    box-shadow: 4px 0px 5px -3px rgba(0,0,0,0.75);
+    z-index: 4;
+    h3 {
+        text-align: center;
+        color: whitesmoke;
+    }
+    a {
+        margin-bottom: 10px;
+        display: block;
+        text-align: center;
+        color: whitesmoke;
+        &:hover {
+            background: rgba(116,8,39, .7);
+        }
+    }
+
+    .hollow-crown-logo {
+        background: url(../../assets/hollow-crown-logo.png);
+        background-size: contain;
+        width: 277px;
+        height: 100px;
+        background-repeat: no-repeat;
+        margin: 10px auto;
+    }
+}
+.toggle-menu {
+    left: 0;
+    transition: all .5s ease-in-out;
+    z-index: 4;
+}
+
+.nav-backdrop {
+    height: 100vh;
+    width: calc(100%-400px);
+    position: fixed;
+    width: 0%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: rgba(0,0,0, .99);
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+.toggle-bg {
+    width: 100%;
+    opacity: 0.65;
+    z-index: 3;
+    top: 0px;
+    left:0;
+    transition: opacity .5s ease-in-out;
+}

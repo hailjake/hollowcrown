@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css?family=Questrial");
+.home-wrapper {
+  position: relative;
+  display: block;
+  background: url("../../assets/hollow-crown-background.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.home-wrapper h2 {
+  color: whitesmoke;
+  text-align: center;
+  letter-spacing: 5px;
+}
+
+.home-wrapper .content-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: auto;
+}
+
+.home-wrapper .content-wrapper .header {
+  width: 100%;
+  height: 100vh;
+  background: url("../../assets/Hollow-Crown-2018.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (max-width: 1850px) {
+  .home-wrapper .content-wrapper .header {
+    height: 700px;
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  .home-wrapper .content-wrapper .header {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .home-wrapper .content-wrapper .header {
+    height: 300px;
+  }
+}
+
+.home-wrapper .content-wrapper .header:before {
+  content: '';
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 0;
+  background: url("../../assets/Hollow-Crown-2018.jpg");
+  background-size: cover;
+  opacity: .9;
+  mix-blend-mode: hard-light;
+  -webkit-animation: animate 1s linear infinite;
+          animation: animate 1s linear infinite;
+}
+
+@media screen and (max-width: 1850px) {
+  .home-wrapper .content-wrapper .header:before {
+    height: 700px;
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  .home-wrapper .content-wrapper .header:before {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .home-wrapper .content-wrapper .header:before {
+    height: 300px;
+  }
+}
+
+.home-wrapper .content-wrapper .header:after {
+  content: '';
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("../../assets/static-bg.gif");
+  background-size: cover;
+  opacity: .3;
+}
+
+@media screen and (max-width: 1850px) {
+  .home-wrapper .content-wrapper .header:after {
+    height: 700px;
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  .home-wrapper .content-wrapper .header:after {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .home-wrapper .content-wrapper .header:after {
+    height: 300px;
+  }
+}
+
+@-webkit-keyframes animate {
+  0% {
+    background-position: 0 0;
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  10% {
+    background-position: 5px 0;
+  }
+  20% {
+    background-position: -5px 0;
+  }
+  30% {
+    background-position: 5px 0;
+  }
+  40% {
+    background-position: -25px 0;
+  }
+  50% {
+    background-position: 5px 0;
+  }
+  60% {
+    background-position: -25px 0;
+  }
+  70% {
+    background-position: 0 -20px;
+  }
+  80% {
+    background-position: -25px 0;
+  }
+  81% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 0;
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  10% {
+    background-position: 5px 0;
+  }
+  20% {
+    background-position: -5px 0;
+  }
+  30% {
+    background-position: 5px 0;
+  }
+  40% {
+    background-position: -25px 0;
+  }
+  50% {
+    background-position: 5px 0;
+  }
+  60% {
+    background-position: -25px 0;
+  }
+  70% {
+    background-position: 0 -20px;
+  }
+  80% {
+    background-position: -25px 0;
+  }
+  81% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 0;
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+.home-wrapper .content-wrapper .header .info {
+  padding: 10px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  position: absolute;
+  bottom: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.home-wrapper .content-wrapper .header .info h1 {
+  font-family: 'Questrial', sans-serif;
+  font-size: 34px;
+  color: white;
+  font-weight: 100;
+  margin: 0;
+  display: inline-block;
+  text-align: left;
+}
+
+.home-wrapper .content-wrapper .header .info i {
+  color: white;
+  font-size: 28px;
+  display: inline-block;
+  float: right;
+  margin-right: 15px;
+}
+
+.home-wrapper .content-wrapper .spotify {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  opacity: .7;
+  z-index: 10;
+}
+
+@media screen and (max-width: 768px) {
+  .home-wrapper .content-wrapper .spotify {
+    width: 100%;
+  }
+}
+
+.home-wrapper .content-wrapper .band-detail {
+  padding: 25px;
+  color: whitesmoke;
+  text-align: center;
+  font-size: 21px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.home-wrapper .content-wrapper .band-detail i {
+  color: white;
+  font-size: 28px;
+  margin-right: 15px;
+}
+
+.home-wrapper .content-wrapper .members-wrapper {
+  width: 100%;
+  background: transparent;
+  overflow: auto;
+  padding: 25px 0;
+}
+
+.home-wrapper .content-wrapper .members-wrapper .member {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 300px;
+  width: 25%;
+  float: left;
+  text-align: center;
+  color: white;
+}
+
+@media screen and (max-width: 1024px) {
+  .home-wrapper .content-wrapper .members-wrapper .member {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home-wrapper .content-wrapper .members-wrapper .member {
+    width: 100%;
+  }
+}
+
+.home-wrapper .content-wrapper .members-wrapper .member .member-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  background-size: cover;
+  background-position: top;
+  margin: 10px auto;
+}
+
+.home-wrapper .content-wrapper .members-wrapper .member a {
+  color: white;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.home-wrapper .content-wrapper .members-wrapper .member a:hover {
+  color: #666;
+}
+
+.home-wrapper .content-wrapper .live-now-wrapper #twitch-embed-jake,
+.home-wrapper .content-wrapper .live-now-wrapper #twitch-embed-james {
+  display: inline-block;
+  float: left;
+  width: 50%;
+}
+
+.home-wrapper .content-wrapper .live-now-wrapper .singleStream {
+  width: 100% !important;
+}
+/*# sourceMappingURL=home.component.css.map */
