@@ -15,10 +15,10 @@
       <div class="member" *ngFor="let member of members">
         <div class="member-image" [style.backgroundImage]="'url('+ member.image +')'"></div>
         <p>{{member.role}}: {{member.name}}</p>
-        <a href="" *ngIf="member.instagram.length > 0">
+        <a href="{{member.instagram}}" target="_blank" *ngIf="member.instagram.length > 0">
           <i class="fab fa-instagram"></i>
         </a>
-        <a href="" *ngIf="member.twitter.length > 0">
+        <a href="{{member.twitter}}" target="_blank" *ngIf="member.twitter.length > 0">
           <i class="fab fa-twitter-square"></i>
         </a>
       </div>
@@ -30,13 +30,14 @@
         their debut album Bitter Not Broken, Hollow Crown is traveling a different path than those aforementioned
         bands, while still maintaining a heavy in-your-face style of music.
       </p>
-      <i class="fab fa-facebook" ></i>
-      <i class="fab fa-instagram"></i>
-      <i class="fab fa-twitter-square"></i>
     </div>
     <!--Twitch Live Feeds-->
     <div class="live-now-wrapper">
-      <h2>LIVE FEEDS</h2>
+      <h2 *ngIf="isJakeVisible || isJamesVisible">
+        LIVE FEEDS
+        <button routerLink="/live" mat-flat-button>View More</button>
+      </h2>
+      
       <div id="twitch-embed-jake" [className]="isJakeVisible && !isJamesVisible ? 'singleStream' : ''"></div>
       <div id="twitch-embed-james" [className]="isJamesVisible && !isJakeVisible ? 'singleStream' : ''"></div>
     </div>

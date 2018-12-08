@@ -23,22 +23,22 @@ export class HomeComponent implements OnInit {
       name: 'James Sauceda',
       role: 'Guitar',
       image: '../../assets/james-sauceda-hollow-crown.jpg',
-      twitter: 'https://www.twitter.com/changegod',
-      instagram: 'https://www.instagram.com/chancegod'
+      twitter: 'https://www.twitter.com/chancegod_',
+      instagram: 'https://www.instagram.com/chancegod_'
     },
     {
       name: 'Zechariah Gamez',
       role: 'Drums',
       image: '../../assets/zechariah-gamez-hollow-crown.jpg',
-      twitter: 'https://www.twitter.com/ghostinthishell',
-      instagram: ''
+      twitter: '',
+      instagram: 'https://www.twitter.com/zackandres_'
     },
     {
       name: 'Tony Romo',
       role: 'Bass',
       image: '../../assets/tony-romo-hollow-crown.jpg',
       twitter: '',
-      instagram: ''
+      instagram: 'https://www.twitter.com/yungtrappplord'
     }
   ];
 
@@ -49,7 +49,7 @@ export class HomeComponent implements OnInit {
   public isJamesVisible = false;
   public isJakeVisible = false;
   public twitchUrlJake = 'https://api.twitch.tv/kraken/streams/shroud?client_id=0091am3rpb4xg4986afk0okeoc851u';
-  public twitchUrlJames = 'https://api.twitch.tv/kraken/streams/sodapoppin?client_id=0091am3rpb4xg4986afk0okeoc851u';
+  public twitchUrlJames = 'https://api.twitch.tv/kraken/streams/lirik?client_id=0091am3rpb4xg4986afk0okeoc851u';
   public setHeader =  { 'Client-ID': '0091am3rpb4xg4986afk0okeoc851u' };
   public embed;
 
@@ -61,7 +61,7 @@ export class HomeComponent implements OnInit {
          this.embed = new Twitch.Embed('twitch-embed-jake', {
           width: '100%',
           height: 480,
-          channel: 'shroud',
+          channel: 'ghostinthishell',
           layout: 'video',
           autoplay: false,
           allowfullscreen: false,
@@ -82,7 +82,7 @@ export class HomeComponent implements OnInit {
         this.embed = new Twitch.Embed('twitch-embed-james', {
           width: '100%',
           height: 480,
-          channel: 'sodapoppin',
+          channel: 'chancegod',
           layout: 'video',
           autoplay: false,
           headers: { 'Client-ID': '0091am3rpb4xg4986afk0okeoc851u' }

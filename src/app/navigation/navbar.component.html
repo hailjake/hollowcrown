@@ -8,11 +8,6 @@
         </button>
     </div>
     <div class="hollow-crown-logo"></div>
-    <div class="social-links">
-        <i class="fab fa-spotify"></i>
-        <i class="fab fa-itunes"></i>
-        <i class="fab fa-bandcamp"></i>
-    </div>
 </mat-toolbar>
 <div class="nav-button-wrapper" [ngClass]="menuToggle ? 'toggle-menu' : ''">
     <div class="hollow-crown-logo"></div>
@@ -24,6 +19,9 @@
     </a>
     <a mat-button routerLink="chat" routerLinkActive="active" (click)="menuToggle=!menuToggle">
         Chat
+    </a>
+    <a mat-button routerLink="" (click)="menuToggle=!menuToggle">
+        Contact
     </a>
      <h3>Socials</h3>
     <a mat-button routerLink=".">

@@ -1,7 +1,7 @@
 .navbar {
   font-family: 'Kosugi', sans-serif !important;
   position: fixed;
-  z-index: 1;
+  z-index: 5;
   background-color: transparent;
 }
 
@@ -37,7 +37,6 @@
   position: absolute;
   right: 20px;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.5);
   padding: 10px 10px 5px 20px;
 }
 
@@ -89,7 +88,7 @@
   left: 0;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
-  z-index: 4;
+  z-index: 6;
 }
 
 .nav-backdrop {

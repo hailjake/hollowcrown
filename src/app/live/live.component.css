@@ -24,7 +24,6 @@
 
 .live-wrapper .content-wrapper .live-now-wrapper #twitch-embed-jake,
 .live-wrapper .content-wrapper .live-now-wrapper #twitch-embed-james {
-  display: inline-block;
   float: left;
   width: 50%;
   height: 100vh;

@@ -228,7 +228,7 @@
   right: 0;
   bottom: 0;
   opacity: .7;
-  z-index: 10;
+  z-index: 1;
 }
 
 @media screen and (max-width: 768px) {
@@ -261,7 +261,7 @@
 .home-wrapper .content-wrapper .members-wrapper .member {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 300px;
+  height: 250px;
   width: 25%;
   float: left;
   text-align: center;
@@ -281,12 +281,22 @@
 }
 
 .home-wrapper .content-wrapper .members-wrapper .member .member-image {
+  border: 2px solid white;
   width: 150px;
   height: 150px;
   border-radius: 100%;
   background-size: cover;
   background-position: top;
   margin: 10px auto;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+}
+
+.home-wrapper .content-wrapper .members-wrapper .member .member-image:hover {
+  cursor: pointer;
+  border-color: darkred;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
 }
 
 .home-wrapper .content-wrapper .members-wrapper .member a {
@@ -297,6 +307,13 @@
 
 .home-wrapper .content-wrapper .members-wrapper .member a:hover {
   color: #666;
+}
+
+.home-wrapper .content-wrapper .live-now-wrapper h2 button {
+  position: relative;
+  top: -5px;
+  font-size: 12px;
+  line-height: 30px;
 }
 
 .home-wrapper .content-wrapper .live-now-wrapper #twitch-embed-jake,
