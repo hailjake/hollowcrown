@@ -17,8 +17,8 @@ export class LiveComponent implements OnInit {
   public isJamesLive = null;
   public isJamesVisible = false;
   public isJakeVisible = false;
-  public twitchUrlJake = 'https://api.twitch.tv/kraken/streams/shroud?client_id=0091am3rpb4xg4986afk0okeoc851u';
-  public twitchUrlJames = 'https://api.twitch.tv/kraken/streams/sodapoppin?client_id=0091am3rpb4xg4986afk0okeoc851u';
+  public twitchUrlJake = 'https://api.twitch.tv/kraken/streams/ghostinthishell?client_id=0091am3rpb4xg4986afk0okeoc851u';
+  public twitchUrlJames = 'https://api.twitch.tv/kraken/streams/chancegod?client_id=0091am3rpb4xg4986afk0okeoc851u';
   public setHeader =  { 'Client-ID': '0091am3rpb4xg4986afk0okeoc851u' };
   public embed;
 
@@ -30,7 +30,7 @@ export class LiveComponent implements OnInit {
         this.embed = new Twitch.Embed('twitch-embed-jake', {
           width: '100%',
           height: '100%',
-          channel: 'shroud',
+          channel: 'ghostinthishell',
           layout: 'video',
           autoplay: false,
           headers: { 'Client-ID': '0091am3rpb4xg4986afk0okeoc851u' }
@@ -51,7 +51,7 @@ export class LiveComponent implements OnInit {
        this.embed = new Twitch.Embed('twitch-embed-james', {
           width: '100%',
           height: '100%',
-          channel: 'sodapoppin',
+          channel: 'chancegod',
           layout: 'video',
           autoplay: false,
           headers: { 'Client-ID': '0091am3rpb4xg4986afk0okeoc851u' }
