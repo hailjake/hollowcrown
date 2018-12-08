@@ -1,37 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import {trigger, stagger, animate, style, group, query as q, transition, keyframes} from '@angular/animations';
-
-const query = (s, a, o = { optional: true}) => q(s, a, o);
-
 declare const Twitch: any;
-
-export const homeTransition = trigger('homeTransition', [
-  transition(':enter', [
-    query('.home-info', style({ opacity: 0 })),
-    query('.home-info', stagger(300, [
-      style({ transform: 'translateY(100px)' }),
-      animate('1s cubic-bezier(.75,-0.48,.26,1.52)', style({transform: 'translateY(0px)', opacity: 1})),
-    ])),
-  ]),
-  transition(':leave', [
-    query('.home-info', stagger(300, [
-      style({ transform: 'translateY(0px)', opacity: 1 }),
-      animate('1s cubic-bezier(.75,-0.48,.26,1.52)', style({transform: 'translateY(100px)', opacity: 0})),
-    ])),
-  ])
-]);
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.component.html',
-  styleUrls: ['home.component.css'],
-  animations: [ homeTransition ],
-  // tslint:disable-next-line:use-host-property-decorator
-  host: {
-    '[@homeTransition]': ''
-  }
+  styleUrls: ['home.component.css']
 })
 
 export class HomeComponent implements OnInit {
@@ -76,7 +51,7 @@ export class HomeComponent implements OnInit {
   public twitchUrlJake = 'https://api.twitch.tv/kraken/streams/shroud?client_id=0091am3rpb4xg4986afk0okeoc851u';
   public twitchUrlJames = 'https://api.twitch.tv/kraken/streams/sodapoppin?client_id=0091am3rpb4xg4986afk0okeoc851u';
   public setHeader =  { 'Client-ID': '0091am3rpb4xg4986afk0okeoc851u' };
-    public embed;
+  public embed;
 
   getTwitchDataJake() {
     this.http.get(this.twitchUrlJake, { headers: this.setHeader}).subscribe(res => {
@@ -90,7 +65,7 @@ export class HomeComponent implements OnInit {
           layout: 'video',
           autoplay: false,
           allowfullscreen: false,
-          headers: this.setHeader
+          headers: { 'Client-ID': '0091am3rpb4xg4986afk0okeoc851u' }
         });
         this.isJakeVisible = true;
       } else {
@@ -110,7 +85,7 @@ export class HomeComponent implements OnInit {
           channel: 'sodapoppin',
           layout: 'video',
           autoplay: false,
-          headers: this.setHeader
+          headers: { 'Client-ID': '0091am3rpb4xg4986afk0okeoc851u' }
         });
         this.isJamesVisible = true;
       } else {
