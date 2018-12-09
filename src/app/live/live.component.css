@@ -22,11 +22,25 @@
   width: calc(100% - 400px);
 }
 
+@media screen and (max-width: 760px) {
+  .live-wrapper .content-wrapper .live-now-wrapper {
+    width: 100%;
+    height: 50vh;
+  }
+}
+
 .live-wrapper .content-wrapper .live-now-wrapper #twitch-embed-jake,
 .live-wrapper .content-wrapper .live-now-wrapper #twitch-embed-james {
   float: left;
   width: 50%;
   height: 100vh;
+}
+
+@media screen and (max-width: 760px) {
+  .live-wrapper .content-wrapper .live-now-wrapper #twitch-embed-jake,
+  .live-wrapper .content-wrapper .live-now-wrapper #twitch-embed-james {
+    height: 50vh;
+  }
 }
 
 .live-wrapper .content-wrapper .live-now-wrapper .singleStream {
@@ -45,9 +59,22 @@
   height: 100vh;
 }
 
+@media screen and (max-width: 760px) {
+  .live-wrapper .content-wrapper .chat-wrapper {
+    width: 100%;
+    height: 50vh;
+  }
+}
+
 .live-wrapper .content-wrapper .chat-wrapper #chat_embed {
   width: 100%;
   height: calc(100vh - 42px);
+}
+
+@media screen and (max-width: 760px) {
+  .live-wrapper .content-wrapper .chat-wrapper #chat_embed {
+    height: calc(50vh - 42px);
+  }
 }
 
 .live-wrapper .content-wrapper .chat-wrapper .chat-toggle {

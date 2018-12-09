@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   public isJamesLive = null;
   public isJamesVisible = false;
   public isJakeVisible = false;
-  public twitchUrlJake = 'https://api.twitch.tv/kraken/streams/shroud?client_id=0091am3rpb4xg4986afk0okeoc851u';
+  public twitchUrlJake = 'https://api.twitch.tv/kraken/streams/ghostinthishell?client_id=0091am3rpb4xg4986afk0okeoc851u';
   public twitchUrlJames = 'https://api.twitch.tv/kraken/streams/chancegod?client_id=0091am3rpb4xg4986afk0okeoc851u';
   public setHeader =  { 'Client-ID': '0091am3rpb4xg4986afk0okeoc851u' };
   public embed;
