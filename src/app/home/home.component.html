@@ -7,8 +7,7 @@
         allowtransparency="true" allow="encrypted-media" class="spotify"></iframe>
     </div>
     <!--Youtube Iframe Hollow Crown: Backhanded Compliments-->
-    <iframe width="100%" height="500" src="https://www.youtube.com/embed/H4Xe3x-w3DU?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>
+    <iframe width="100%" height="500" src="https://www.youtube.com/embed/H4Xe3x-w3DU?controls=0" frameborder="0" allow=""></iframe>
     <!--Members-->
     <div class="members-wrapper">
       <h2>HOLLOW CULT</h2>
@@ -26,23 +25,42 @@
     <!--Band Detail-->
     <div class="band-detail">
       <p>
-        Hollow Crown is comprised of members from Carnifex, Her Demise My Rise and So This Is Suffering. Fresh off
+        Hollow Crown hailing from southern california and comprised of members from Carnifex, Her Demise My Rise and So This Is Suffering. Fresh off
         their debut album Bitter Not Broken, Hollow Crown is traveling a different path than those aforementioned
         bands, while still maintaining a heavy in-your-face style of music.
       </p>
     </div>
+
+<div class="discog">
+  <h2>Releases</h2>
+  <a href="https://open.spotify.com/artist/6cb0pSk4lsrgPdT0G2foKO" target="_blank">
+    <div class="cd-wrapper">
+        <h3>Bitter Not Broken</h3>
+        <div class="cd-1"></div>
+      </div>
+  </a>
+  <a href="https://open.spotify.com/artist/6cb0pSk4lsrgPdT0G2foKO" target="_blank">
+    <div class="cd-wrapper">
+        <h3>Hollow Crown X Pentagrvm</h3>
+        <div class="cd-2"></div>
+      </div>
+  </a>
+</div>
+
     <!--Twitch Live Feeds-->
     <div class="live-now-wrapper">
       <h2 *ngIf="isJakeVisible || isJamesVisible">
         LIVE FEEDS
         <button routerLink="/live" mat-flat-button>View More</button>
       </h2>
-      
+      <div *ngIf="isJakeVisible && !isJamesVisible" [style.backgroundImage]="'url('+ isJakeLive.stream.channel.profile_banner +')'" class="jake-live-banner">
+          <img src="{{ isJakeLive.stream.channel.logo }}"/>
+          <div class="live"></div>
+          <h2>{{ isJakeLive.stream.game }}</h2>
+          <p>{{ isJakeLive.stream.channel.status }}</p>
+      </div>
       <div id="twitch-embed-jake" [className]="isJakeVisible && !isJamesVisible ? 'singleStream' : ''"></div>
       <div id="twitch-embed-james" [className]="isJamesVisible && !isJakeVisible ? 'singleStream' : ''"></div>
     </div>
-    <!--  <a class="twitter-timeline" href="https://twitter.com/HollowCrownBand?ref_src=twsrc%5Etfw"></a>
-    <iframe src="https://discordapp.com/widget?id=509442841802571777&theme=dark" width="100%" height="100%"
-      allowtransparency="true" frameborder="0"></iframe>-->
   </div>
 </div>

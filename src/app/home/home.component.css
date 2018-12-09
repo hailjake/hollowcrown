@@ -309,6 +309,81 @@
   color: #666;
 }
 
+.home-wrapper .content-wrapper .discog {
+  overflow: auto;
+}
+
+.home-wrapper .content-wrapper .discog .cd-wrapper {
+  float: left;
+  width: 50%;
+}
+
+@media screen and (max-width: 835px) {
+  .home-wrapper .content-wrapper .discog .cd-wrapper {
+    width: 100%;
+  }
+}
+
+.home-wrapper .content-wrapper .discog .cd-wrapper h3 {
+  color: white;
+  text-align: center;
+}
+
+.home-wrapper .content-wrapper .discog .cd-wrapper .cd-1 {
+  display: block;
+  margin: auto;
+  width: 400px;
+  height: 400px;
+  background: url("../../assets/hollow-crown-bitter-not-broken.jpg");
+  background-size: cover;
+}
+
+@media screen and (max-width: 450px) {
+  .home-wrapper .content-wrapper .discog .cd-wrapper .cd-1 {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.home-wrapper .content-wrapper .discog .cd-wrapper .cd-2 {
+  display: block;
+  margin: auto;
+  width: 400px;
+  height: 400px;
+  background: url("../../assets/hollow-crown-bitter-not-broken-pentagrvm-remix.png");
+  background-size: cover;
+}
+
+@media screen and (max-width: 450px) {
+  .home-wrapper .content-wrapper .discog .cd-wrapper .cd-2 {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.home-wrapper .content-wrapper .live-now-wrapper .jake-live-banner {
+  background-size: cover;
+  background-position: center;
+  padding: 15px;
+}
+
+.home-wrapper .content-wrapper .live-now-wrapper .jake-live-banner img {
+  display: block;
+  width: 100px;
+  border-radius: 100%;
+  margin: auto;
+}
+
+.home-wrapper .content-wrapper .live-now-wrapper .jake-live-banner h2 {
+  text-align: center;
+}
+
+.home-wrapper .content-wrapper .live-now-wrapper .jake-live-banner p {
+  color: white;
+  text-align: center;
+  font-size: 18px;
+}
+
 .home-wrapper .content-wrapper .live-now-wrapper h2 button {
   position: relative;
   top: -5px;

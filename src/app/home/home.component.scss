@@ -236,10 +236,67 @@
         }
       }
     }
+.discog {
+  overflow: auto;
+  .cd-wrapper {
+    float: left;
+    width: 50%;
+    @media screen and (max-width: 835px) {
+      width: 100%;
+    }
 
+    h3{
+      color: white;
+      text-align: center;
+    }
+    .cd-1 {
+      display: block;
+      margin: auto;
+      width: 400px;
+      height: 400px;
+      background: url('../../assets/hollow-crown-bitter-not-broken.jpg');
+      background-size: cover;
+      @media screen and (max-width: 450px) {
+        width: 300px;
+        height: 300px;
+      }
+    }
+    .cd-2 {
+      display: block;
+      margin: auto;
+      width: 400px;
+      height: 400px;
+      background: url('../../assets/hollow-crown-bitter-not-broken-pentagrvm-remix.png');
+      background-size: cover;
+      @media screen and (max-width: 450px) {
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
+}
 
     .live-now-wrapper {
 
+      .jake-live-banner{
+        background-size: cover;
+        background-position: center;
+        padding: 15px;
+        img {
+          display: block;
+          width: 100px;
+          border-radius: 100%;
+          margin: auto;
+        }
+        h2 {
+          text-align: center;
+        }
+        p {
+          color: white;
+          text-align: center;
+          font-size: 18px;
+        }
+      }
       h2{
         button{
           position: relative;

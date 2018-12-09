@@ -10,6 +10,14 @@ declare const Twitch: any;
 })
 
 export class HomeComponent implements OnInit {
+  public isJakeLive = null;
+  public isJamesLive = null;
+  public isJamesVisible = false;
+  public isJakeVisible = false;
+  public twitchUrlJake = 'https://api.twitch.tv/kraken/streams/shroud?client_id=0091am3rpb4xg4986afk0okeoc851u';
+  public twitchUrlJames = 'https://api.twitch.tv/kraken/streams/chancegod?client_id=0091am3rpb4xg4986afk0okeoc851u';
+  public setHeader =  { 'Client-ID': '0091am3rpb4xg4986afk0okeoc851u' };
+  public embed;
 
   public members = [
     {
@@ -17,41 +25,32 @@ export class HomeComponent implements OnInit {
       role: 'Vocalist',
       image: '../../assets/jake-anderson-hollow-crown-promo.jpg',
       twitter: 'https://www.twitter.com/ghostinthishell',
-      instagram: 'https://www.instagram.com/hollow_jake'
+      instagram: 'https://www.instagram.com/hollow_jake',
     },
     {
       name: 'James Sauceda',
       role: 'Guitar',
       image: '../../assets/james-sauceda-hollow-crown.jpg',
       twitter: 'https://www.twitter.com/chancegod_',
-      instagram: 'https://www.instagram.com/chancegod_'
+      instagram: 'https://www.instagram.com/chancegod_',
     },
     {
       name: 'Zechariah Gamez',
       role: 'Drums',
       image: '../../assets/zechariah-gamez-hollow-crown.jpg',
       twitter: '',
-      instagram: 'https://www.twitter.com/zackandres_'
+      instagram: 'https://www.instagram.com/zackandres_'
     },
     {
       name: 'Tony Romo',
       role: 'Bass',
       image: '../../assets/tony-romo-hollow-crown.jpg',
       twitter: '',
-      instagram: 'https://www.twitter.com/yungtrappplord'
+      instagram: 'https://www.instagram.com/yungtrappplord'
     }
   ];
 
   constructor(private http: HttpClient) {}
-
-  public isJakeLive = null;
-  public isJamesLive = null;
-  public isJamesVisible = false;
-  public isJakeVisible = false;
-  public twitchUrlJake = 'https://api.twitch.tv/kraken/streams/ghostinthishell?client_id=0091am3rpb4xg4986afk0okeoc851u';
-  public twitchUrlJames = 'https://api.twitch.tv/kraken/streams/chancegod?client_id=0091am3rpb4xg4986afk0okeoc851u';
-  public setHeader =  { 'Client-ID': '0091am3rpb4xg4986afk0okeoc851u' };
-  public embed;
 
   getTwitchDataJake() {
     this.http.get(this.twitchUrlJake, { headers: this.setHeader}).subscribe(res => {
